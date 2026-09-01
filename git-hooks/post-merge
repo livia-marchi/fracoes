@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Caminho absoluto do repo
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+echo "Rodando o hook de post-merge: rebuild-ypp.sh"
+
+# Executa o script no root do repo
+"$REPO_ROOT/rebuild-ypp.sh"

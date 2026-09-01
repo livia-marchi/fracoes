@@ -1,0 +1,1 @@
+global.pontuacao = 0;

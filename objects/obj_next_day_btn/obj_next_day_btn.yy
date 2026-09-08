@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_next_level_btn",
-    "path":"sprites/spr_next_level_btn/spr_next_level_btn.yy",
+    "name":"spr_menu_btn",
+    "path":"sprites/spr_menu_btn/spr_menu_btn.yy",
   },
   "spriteMaskId":null,
   "visible":true,

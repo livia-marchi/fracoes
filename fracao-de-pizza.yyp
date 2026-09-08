@@ -32,7 +32,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.100.0.1142",
   },
   "name":"fracao-de-pizza",
   "resources":[
@@ -82,6 +82,7 @@
     {"id":{"name":"spr_bkg3","path":"sprites/spr_bkg3/spr_bkg3.yy",},},
     {"id":{"name":"spr_clock","path":"sprites/spr_clock/spr_clock.yy",},},
     {"id":{"name":"spr_cutboard","path":"sprites/spr_cutboard/spr_cutboard.yy",},},
+    {"id":{"name":"spr_menu_box_3","path":"sprites/spr_menu_box_3/spr_menu_box_3.yy",},},
     {"id":{"name":"spr_menu_box","path":"sprites/spr_menu_box/spr_menu_box.yy",},},
     {"id":{"name":"spr_menu_box2","path":"sprites/spr_menu_box2/spr_menu_box2.yy",},},
     {"id":{"name":"spr_menu_btn","path":"sprites/spr_menu_btn/spr_menu_btn.yy",},},

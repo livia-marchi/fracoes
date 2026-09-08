@@ -1,3 +1,7 @@
+if (!instance_exists(obj_stages)) {
+    show_debug_message("!!! OBJ_STAGES NÃO EXISTE !!! Room: " + string(room));
+}
+
 font_enable_effects(font_money, true, {
     outlineEnable: true,
     outlineDistance: 10,

@@ -23,8 +23,8 @@ function load_next_stage(){
 }
 
 function game_over(){
-	show_message("Voce perdeu!");
-	reset_state();
+	layer_set_visible("game_over_layer", true);
+	//reset_state();
 }
 
 function reset_state() {

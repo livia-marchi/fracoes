@@ -5,8 +5,8 @@ function next_stage() {
 		show_debug_message(global.current_stage);
 		layer_set_visible("in_game_layer", true);
 	} else {
-		show_message("Você terminou a semana!");
-		reset_state();
+		layer_set_visible("end_of_the_week_layer", true);
+		//reset_state();
 	}
 }
 

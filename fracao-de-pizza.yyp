@@ -84,6 +84,7 @@
     {"id":{"name":"spr_clock","path":"sprites/spr_clock/spr_clock.yy",},},
     {"id":{"name":"spr_cutboard","path":"sprites/spr_cutboard/spr_cutboard.yy",},},
     {"id":{"name":"spr_end_of_the_day","path":"sprites/spr_end_of_the_day/spr_end_of_the_day.yy",},},
+    {"id":{"name":"spr_end_of_the_week","path":"sprites/spr_end_of_the_week/spr_end_of_the_week.yy",},},
     {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},},
     {"id":{"name":"spr_menu_box_3","path":"sprites/spr_menu_box_3/spr_menu_box_3.yy",},},
     {"id":{"name":"spr_menu_box","path":"sprites/spr_menu_box/spr_menu_box.yy",},},

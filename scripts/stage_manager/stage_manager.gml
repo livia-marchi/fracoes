@@ -6,7 +6,7 @@ function next_stage() {
 		layer_set_visible("in_game_layer", true);
 	} else {
 		layer_set_visible("end_of_the_week_layer", true);
-		//reset_state();
+		reset_state();
 	}
 }
 
@@ -59,14 +59,14 @@ function update_money_stats_menu() {
 		var _money_struct = flexpanel_node_get_struct(_money_panel);
 		var _money_text_el = _money_struct.layerElements[0].elementId;
 		
-		layer_text_text(_money_text_el, "Total do dia: R$ " + string(obj_money.money));
+		layer_text_text(_money_text_el, "" + string(obj_money.money));
 		
 		// Total da semana
 		var _money_total_panel = flexpanel_node_get_child(_layer_panel, "money_total")
 		var _money_total_struct = flexpanel_node_get_struct(_money_total_panel);
 		var _money_total_text_el = _money_total_struct.layerElements[0].elementId;
 		
-		layer_text_text(_money_total_text_el, "Total da semana: R$ " + string(obj_money.total_money_week));
+		layer_text_text(_money_total_text_el, "" + string(obj_money.total_money_week));
 }
 
 function update_gui_stats(){

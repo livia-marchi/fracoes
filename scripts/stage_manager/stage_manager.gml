@@ -5,6 +5,16 @@ function next_stage() {
 		show_debug_message(global.current_stage);
 		layer_set_visible("in_game_layer", true);
 	} else {
+		// pausa o jogo
+		global.game_paused = true;
+		instance_create_layer(
+		    0,
+		    0,
+		    "PauseBlocker",
+		    obj_pause_blocker
+		);
+		
+		// mostra a mensagem 
 		layer_set_visible("end_of_the_week_layer", true);
 		reset_state();
 	}

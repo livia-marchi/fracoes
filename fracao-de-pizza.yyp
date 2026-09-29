@@ -94,6 +94,7 @@
     {"id":{"name":"spr_menu_btn","path":"sprites/spr_menu_btn/spr_menu_btn.yy",},},
     {"id":{"name":"spr_new_background","path":"sprites/spr_new_background/spr_new_background.yy",},},
     {"id":{"name":"spr_next_level_btn","path":"sprites/spr_next_level_btn/spr_next_level_btn.yy",},},
+    {"id":{"name":"spr_pause","path":"sprites/spr_pause/spr_pause.yy",},},
     {"id":{"name":"spr_pizza","path":"sprites/spr_pizza/spr_pizza.yy",},},
     {"id":{"name":"spr_plate","path":"sprites/spr_plate/spr_plate.yy",},},
     {"id":{"name":"spr_sticke","path":"sprites/spr_sticke/spr_sticke.yy",},},

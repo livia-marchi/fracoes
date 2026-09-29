@@ -1,24 +1,48 @@
 function next_stage() {
-	if (global.current_stage < array_length(obj_stages.STAGE_STATES)) {
-		update_money_stats_menu();
-		global.current_stage = global.current_stage + 1;
-		show_debug_message(global.current_stage);
-		layer_set_visible("in_game_layer", true);
-	} else {
-		// pausa o jogo
-		global.game_paused = true;
+    if (global.current_stage < array_length(obj_stages.STAGE_STATES)) {
+
+        // pausa o jogo
+        global.game_paused = true;
+
+        // desativa os objetos interativos da pizzaria
+        instance_deactivate_layer(layer_get_id("Instances"));
+
+        instance_create_layer(
+            0,
+            0,
+            "PauseBlocker",
+            obj_pause
+        );
+
+        update_money_stats_menu();
+
+        global.current_stage = global.current_stage + 1;
+
+        show_debug_message(global.current_stage);
+
+        layer_set_visible("in_game_layer", true);
+
+    } else {
+		/*global.game_paused = false;
+
+		instance_activate_layer(layer_get_id("Instances"));
 		instance_create_layer(
-		    0,
-		    0,
-		    "PauseBlocker",
-		    obj_pause_blocker
-		);
-		
-		// mostra a mensagem 
-		layer_set_visible("end_of_the_week_layer", true);
-		reset_state();
-	}
+            0,
+            0,
+            "PauseBlocker",
+            obj_pause
+        );
+
+		with (obj_pause) {
+		    instance_destroy();
+		}
+		*/
+        layer_set_visible("end_of_the_week_layer", true);
+
+        reset_state();
+    }
 }
+
 
 function load_next_stage(){
 		layer_set_visible("in_game_layer", false);
@@ -33,13 +57,22 @@ function load_next_stage(){
 }
 
 function game_over(){
+	
+	 // pausa o jogo
+     global.game_paused = true;
+
+    // desativa as instâncias
+    instance_deactivate_layer(layer_get_id("Instances"));
 	layer_set_visible("game_over_layer", true);
+	
 	//reset_state();
 }
 
 function reset_state() {
 	global.current_stage = 1;
-	obj_money.money = 0.00;
+	with (obj_money) {
+		money = 0.00;
+	}
 	obj_money.total_money_week = 0.00;
 	obj_pizza.reset_pizza();
 	obj_pizza_plate.reset_plate();

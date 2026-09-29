@@ -1,7 +1,8 @@
-// continua o jogo
 global.game_paused = false;
 
-with (obj_pause_blocker) {
+instance_activate_layer(layer_get_id("Instances"));
+
+with (obj_pause) {
     instance_destroy();
 }
 

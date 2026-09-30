@@ -1,11 +1,7 @@
 function next_stage() {
     if (global.current_stage < array_length(obj_stages.STAGE_STATES)) {
 
-        // pausa o jogo
         global.game_paused = true;
-
-        // desativa os objetos interativos da pizzaria
-        instance_deactivate_layer(layer_get_id("Instances"));
 
         instance_create_layer(
             0,
@@ -16,31 +12,26 @@ function next_stage() {
 
         update_money_stats_menu();
 
-        global.current_stage = global.current_stage + 1;
-
-        show_debug_message(global.current_stage);
+        global.current_stage++;
 
         layer_set_visible("in_game_layer", true);
 
     } else {
-		/*global.game_paused = false;
+        // pausa o jogo
+	    global.game_paused = true;
 
-		instance_activate_layer(layer_get_id("Instances"));
-		instance_create_layer(
-            0,
-            0,
-            "PauseBlocker",
-            obj_pause
-        );
+	    // cria o bloqueador visual
+	    instance_create_layer(
+	        0,
+	        0,
+	        "PauseBlocker",
+	        obj_pause
+	    );
 
-		with (obj_pause) {
-		    instance_destroy();
-		}
-		*/
-        layer_set_visible("end_of_the_week_layer", true);
-
-        reset_state();
-    }
+	    // mostra a tela de fim da semana
+	    layer_set_visible("end_of_the_week_layer", true);
+	    }
+		//reset_state()
 }
 
 
@@ -62,7 +53,7 @@ function game_over(){
      global.game_paused = true;
 
     // desativa as instâncias
-    instance_deactivate_layer(layer_get_id("Instances"));
+    //instance_deactivate_layer(layer_get_id("Instances"));
 	layer_set_visible("game_over_layer", true);
 	
 	//reset_state();

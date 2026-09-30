@@ -1,3 +1,4 @@
+if (global.game_paused) exit; // não permite clicar na pizza quando o jogo está pausado
 if (anim_state != "idle") exit;
 
 // Ignora clicks fora da pizza

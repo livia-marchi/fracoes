@@ -9,7 +9,12 @@ for (var i = min_slices; i <= max_slices; i++) {
     var bx = start_x + (i - min_slices) * (btn_width + btn_spacing);
     var by = start_y;
     
-    var hover = point_in_rectangle(mouse_x, mouse_y, bx, by, bx + btn_width, by + btn_height);
+    var hover = false;
+
+	if (!global.game_paused) {
+	    hover = point_in_rectangle(mouse_x, mouse_y, bx, by, bx + btn_width, by + btn_height);
+	}
+	
     var is_selected = false;
     
     if (instance_exists(obj_pizza)) {

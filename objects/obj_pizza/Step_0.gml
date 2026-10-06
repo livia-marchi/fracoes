@@ -9,7 +9,7 @@ slice_count = clamp(slice_count, 2, 9);
 
 // Refaz o array se o count mudou
 if (slice_count != last_slice_count) {
-	slice_size = 360 / slice_count;
+    slice_size = 360 / slice_count;
     slices = [];
     
     for (var i = 0; i < slice_count; i++) {
@@ -21,10 +21,10 @@ if (slice_count != last_slice_count) {
     }
 
     last_slice_count = slice_count;
-	
-	// Ativa o efeito visual de corte
-	cut_scale = 1.12;
-	cut_effect_timer = 15;
+    
+    // Ativa o efeito visual de corte
+    cut_scale = 1.12;
+    cut_effect_timer = 15;
 }
 
 // Logic for pizza and peel animation
@@ -36,7 +36,7 @@ if (anim_state == "idle") {
 } else if (anim_state == "serving") {
     // Peel slides UP to pizza FIRST!
     if (peel_y > y) {
-        peel_y -= anim_speed * 1.5; // Sobe mais rápido para pegar a pizza com agilidade
+        peel_y -= anim_speed * 1.5;
         if (peel_y < y) peel_y = y;
     } else {
         // Once peel reaches pizza, both go down
@@ -72,8 +72,9 @@ if (anim_state == "idle") {
 if (cut_effect_timer > 0) {
     cut_effect_timer--;
 }
+
 if (cut_scale > 1.0) {
-    cut_scale -= 0.015; // Retorno suave ao tamanho original (1.0)
+    cut_scale -= 0.015;
     if (cut_scale < 1.0) cut_scale = 1.0;
 }
 
@@ -81,17 +82,20 @@ if (cut_scale > 1.0) {
 var mouse_dist_pizza = point_distance(x, y, mouse_x, mouse_y);
 var mouse_ang_pizza = point_direction(x, y, mouse_x, mouse_y);
 var hover_pizza_idx = -1;
+
 if (anim_state == "idle" && mouse_dist_pizza <= sprite_width / 2) {
     hover_pizza_idx = floor(mouse_ang_pizza / slice_size);
 }
 
 var hover_plate_idx = -1;
+
 if (instance_exists(obj_pizza_plate) && obj_pizza_plate.anim_state == "idle") {
     var px = obj_pizza_plate.x;
     var py = obj_pizza_plate.y;
     var mouse_dist_plate = point_distance(px, py, mouse_x, mouse_y);
     var mouse_ang_plate = point_direction(px, py, mouse_x, mouse_y);
     var plate_radius = (sprite_get_width(spr_plate) * obj_pizza_plate.image_xscale) / 2;
+
     if (mouse_dist_plate <= plate_radius) {
         hover_plate_idx = floor(mouse_ang_plate / slice_size);
     }
@@ -108,6 +112,7 @@ for (var i = 0; i < array_length(slices); i++) {
     if (slices[i].visible && !slices[i].animated && i == hover_pizza_idx) {
         target_offset = 12.0;
     }
+    
     // Se a fatia estiver no prato e o prato estiver hovered
     else if (!slices[i].visible && slices[i].onplate && !slices[i].animated && i == hover_plate_idx) {
         target_offset = 12.0;

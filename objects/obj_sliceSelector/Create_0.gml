@@ -5,6 +5,8 @@ btn_width = 50;
 btn_height = 50;
 btn_spacing = 15;
 
+global.slice_selector = id;
+
 // Centralização baseada na quantidade de botões
 var total_buttons = (max_slices - min_slices) + 1;
 total_width = (total_buttons * btn_width) + ((total_buttons - 1) * btn_spacing);

@@ -1,3 +1,4 @@
+if (global.game_paused) exit; // para pausar
 if (mouse_check_button_pressed(mb_left)) {
     var start_x = x - (total_width / 2);
     var start_y = y;

@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_next_level_btn",
-    "path":"sprites/spr_next_level_btn/spr_next_level_btn.yy",
+    "name":"spr_call_bell",
+    "path":"sprites/spr_call_bell/spr_call_bell.yy",
   },
   "spriteMaskId":null,
   "visible":true,
